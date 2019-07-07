@@ -1,4 +1,5 @@
 # Functional Safety
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 [//]: # (Image References)
 
@@ -8,6 +9,9 @@
 [image4]: ./docs/software_V.png "VModel"
 [image5]: ./docs/Programming.png "Language"
 [image6]: ./docs/MISRA.png "Guidelines"
+[image7]: ./docs/ASIL.png "ASIL"
+[image8]: ./docs/Hazard.png "Hazard"
+[image9]: ./docs/FlattenV.png "Linear"
 
 ## Introduction
 The term "functional" comes from a branch of systems engineering called requirements engineering. 
@@ -18,7 +22,7 @@ The term "functional" comes from a branch of systems engineering called requirem
 
 Functional safety looks at what happens when the system does something that it was not supposed to do, which is called a malfunction.
 
-The most generic standard is IEC 61508, which originated from industrial markets.  It currently exists as a standard in the IEC/ISO basic safety publication, which covers "general functional safety," for a number of industries. ISO 26262 specifically applies to automotive passenger vehicle electrical and electronic systems. The ISO 26262 standard is an branch of the IEC 61508 standard.
+The most generic standard is **IEC 61508**, which originated from industrial markets.  It currently exists as a standard in the IEC/ISO basic safety publication, which covers "general functional safety," for a number of industries. *ISO 26262* specifically applies to automotive passenger vehicle electrical and electronic systems. The ISO 26262 standard is an branch of the IEC 61508 standard.
 
 ## Project Reference
 [Functional Safety](https://github.com/udacity/CarND-Functional-Safety-Project)
@@ -26,7 +30,7 @@ The most generic standard is IEC 61508, which originated from industrial markets
 ## Do and Don'ts
 * Functional safety only looks at the electrical and electronic system malfunction.
 * Functional safety does not test for nominal performance.
-* If a potential electrical malfunction could cause the battery fire, that could be a part of a functional safety analysis. The car battery chemicals generally would be part of chemical system safety.
+* If a potential electrical malfunction could cause the battery fire, that could be a part of a functional safety analysis. The battery chemicals generally would be part of chemical system safety.
 * Autonomous vehicle technology is so new that standards like ISO 26262 do not yet even consider certain issues related to self-driving cars such as machine learning algorithms.
 
 ## The Basics of Functional Safety: Review
@@ -38,9 +42,30 @@ The most generic standard is IEC 61508, which originated from industrial markets
 
 ![alt text][image1]
 
+The ISO 26262 functional safety standard follows the V model.
+
+* *Requirements engineering* Define what the system is going to do
+* *Designing or modifying a system architecture* Design what the system will look like
+* *Test the system* to make sure it behaves as expected
+* *Integrate the system* into larger systems
+
 ## V Model 
 
 ![alt text][image2]
+
+## Flattened V Model
+Flatten out the V model to see if from a linear perspective.
+
+![alt text][image9]
+
+
+## Hazard Analysis and Risk Assessment
+
+![alt text][image8]
+
+## ASIL
+
+![alt text][image7]
 
 ## Hardware and software
 ![alt text][image3]
