@@ -16,6 +16,7 @@
 ## Software safety
 
 ### The V model
+
 <span style="color: #00BFFF; font-family: Babas; font-size: 1em;">Functional safety in general can be an iterative process where developing a new section of the V model can lead to changes in a previous section and vice versa.</span>
 
 On the software side, there is an architectural design section as well as a unit design section:
@@ -31,12 +32,14 @@ On the software side, there is an architectural design section as well as a unit
 
 
 ### Architectural Design vs Unit Design
+
 * The software architectural design is a higher level view of software components.
 * A unit is a smaller part of a software architecture.
 * A unit could be a software driver to read raw data from a camera sensor.
 
 --- 
 ## The programming language
+
 ![alt text][image5]
 
 *  A strongpoint for C++ is the ability to write high-speed software with many input-output operations.
@@ -44,18 +47,20 @@ On the software side, there is an architectural design section as well as a unit
 * C++ does not provide much in terms of run-time error checking.
 
 ### MISRA
+
 * The MISRA C++ standard discusses a subset of C++ that is appropriate to safety critical applications. 
 * The standard contains a set of rules for how to use the C++ language in automotive applications.
 
 ![alt text][image6]
 
-### Software Tools 
+### Software Tools
+
 Ensure MISRA compliance for the following tools
 
 * Compilers are one example of software tools.
 * Version control software.
 * Testing tools.
-* Graphical modeling tools that automatically generate code
+* Graphical modelling tools that automatically generate code
 
 ### Software Tool Confidence Level
 
@@ -72,16 +77,19 @@ Ensure MISRA compliance for the following tools
 ---
 
 ## Mechanism for ensuring freedom from spatial interference
+
 * Memory protection unit (MPU)
 * Dual storage of relevant data
 * Redundancy checks such as CRC to make sure data does not inadvertently change.
 * Micro-controllers with memory error detection and correction capabilities
 * Operating systems that allow software units to have their own virtual memory space
 
-#### MPU
+### MPU
+
 MPU is a prevention method because it stops elements from accessing memory to which they should not have access. An MPU can be programmed to set up the proper read, write and execute permissions between software elements.
 
-#### Dual Storage
+### Dual Storage
+
 Dual storage of relevant data like with a 2's complement is a detection method.
 
 ---
@@ -90,7 +98,7 @@ Dual storage of relevant data like with a 2's complement is a detection method.
 
 ![alt text][image13]
 
-#### Deadlocks Vs Livelocks
+### Deadlocks Vs Livelocks
 
 ![alt text][image14]
 
@@ -100,16 +108,18 @@ Thread 1 needs Resource B and have Resource A. But Thread 2 keeps interrupting T
 
 Both the threads have courtesy to go the other thread to go first.
 
-#### Priority Ceiling
+### Priority Ceiling
+
 For addressing deadlocks, disabling OS interrupts that would stop process preemption, is inefficient and could compromise the overall response time and system latency. An alternative is a feature that is provided by a Real Time Operating System (RTOS) is a *priority ceiling*.
 
-#### Synchronization
+### Synchronization
 
 Clock synchronization between two Electronic Control Unit (ECU)
 
 ![alt text][image16]
 
-#### Mechanism to prevent
+### Mechanism to prevent
+
 * Cyclic execution scheduling
 * Fixed priority based scheduling
 * Time triggered scheduling
@@ -117,7 +127,8 @@ Clock synchronization between two Electronic Control Unit (ECU)
 * Program sequence monitoring
 * Arrival rate monitoring.
 
-#### 3 Safety Mechanism
+### 3 Safety Mechanism
+
 * Alive supervision - Number of time the element got executed.
 * Deadline monitoring - How long it takes to execute the software.
 * Control flow monitoring - Software executed in the correct order.
@@ -138,20 +149,21 @@ There are many causes for communication faults. These causes would be analyzed i
 * Incorrect sequence of information
 * Corruption of information
 
-#### Mechanisms
+### Mechanisms
+
 * Loopback of information
 * Acknowledgement of information
 * Appropriate configuration of I/O pins
 * Bus arbitration by priority
 * E2E protocol
 
-#### E2E Mechanism
+### E2E Mechanism
 
 The technical safety requirement could be refined into a software safety requirement that the data shall be protected by an End2End mechanism
 
 ![alt text][image18]
 
-#### E2E Protocol
+### E2E Protocol
 
 ![alt text][image19]
 
@@ -164,6 +176,7 @@ The technical safety requirement could be refined into a software safety require
 * That way the receiver can make sure that messages haven't been lost.
 
 ### Software Partitioning and Safety Monitoring
+
 * Safety monitoring and software partitions are software mechanisms commonly solved with design patterns.
 * Software partition - hardware feature called MPU along with dual data storage.
 
