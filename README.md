@@ -12,6 +12,7 @@
 [image10]: ./docs/Software_safety.png "Software Safety"
 [image11]: ./docs/Robustness.png "Software Safety"
 [image12]: ./docs/Interference.png "Freedom"
+[image21]: ./docs/System.png "System"
 
 
 ## Introduction
@@ -38,6 +39,7 @@ The most generic standard is **IEC 61508**, which originated from industrial mar
 * Identify Hazards
 * Evaluate the risk
 * Using System Engineering to Lower Risk
+
 ---
 
 ## ISO 26262
@@ -72,6 +74,10 @@ Flatten out the V model to see it from a linear perspective.
 ## Hardware and software
 
 ![alt text][image3]
+
+Functional safety project
+
+![alt text][image21]
 
 ## Software safety requirements
 
