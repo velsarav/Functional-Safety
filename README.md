@@ -88,3 +88,6 @@ Types of interference
 
 ## Project Reference
 [Technical safety requirement](https://github.com/udacity/CarND-Functional-Safety-Project)
+
+## Software safety
+In the next section we will discuss more about [software safety](https://github.com/velsarav/Functional-Safety/blob/master/SoftwareSafety.md)
